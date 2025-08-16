@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "878892485283",
+    "firebase_url": "https://soul-sync-d94b0-default-rtdb.firebaseio.com",
+    "project_id": "soul-sync-d94b0",
+    "storage_bucket": "soul-sync-d94b0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:878892485283:android:7c3296876bfb945529cd16",
+        "android_client_info": {
+          "package_name": "com.example.wordwave"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbL8HLOTG6xj6g5W3iPxdne2k2bfHnpRM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
