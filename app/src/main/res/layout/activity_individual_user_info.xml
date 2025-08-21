@@ -70,7 +70,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fullname_individualinfo">
 
-        <com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton
+        <Button
             android:id="@+id/videocallicon_individual_userinfo"
             android:layout_width="26dp"
             android:layout_height="26dp"
@@ -101,7 +101,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fullname_individualinfo">
 
-        <com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton
+        <Button
             android:id="@+id/callicon_individual_userinfo"
             android:layout_width="26dp"
             android:layout_height="26dp"

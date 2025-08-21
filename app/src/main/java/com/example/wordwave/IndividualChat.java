@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -30,7 +31,6 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -45,12 +45,13 @@ public class IndividualChat extends AppCompatActivity {
 
     private String targetUserId, targetUserName, targetUserProfilePicUri, currentUserId;
     private ImageView backButtonindividualchatHeading, profileicon_individualchat_heading, attachImageButton;
-    private ZegoSendCallInvitationButton callicon_individualchat_heading, videocallicon_individualchat_heading;
+
     private TextView username_individualchat_heading, status_individualchat_heading;
     private LinearLayout linearlayout_individualchat_heading;
     private FirebaseDatabase database;
     private EditText messageEdittext;
     private ShapeableImageView sendbutton;
+    private Button callicon_individualchat_heading,videocallicon_individualchat_heading;
     private androidx.recyclerview.widget.RecyclerView recylerView_individualchat;
     private RecyclerAdapterIndividualChat adapter;
 

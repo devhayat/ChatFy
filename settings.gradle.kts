@@ -16,7 +16,6 @@ dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         // ✅ Correct Zego repo URL
-        maven { setUrl( "https://storage.zego.im/maven/releases/") }
         maven { setUrl("https://www.jitpack.io")  }
         google()
         mavenCentral()

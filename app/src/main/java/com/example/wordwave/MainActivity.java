@@ -29,9 +29,6 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.zegocloud.uikit.prebuilt.call.ZegoUIKitPrebuiltCallService;
-import com.zegocloud.uikit.prebuilt.call.invite.ZegoUIKitPrebuiltCallInvitationConfig;
-import com.zegocloud.uikit.prebuilt.call.invite.ZegoUIKitPrebuiltCallInvitationService;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -284,15 +281,8 @@ public class MainActivity extends AppCompatActivity {
         String userID = UID; // yourUserID, userID should only contain numbers, English characters, and '_'.
         String userName = un;   // yourUserName
 
-        ZegoUIKitPrebuiltCallInvitationConfig callInvitationConfig = new ZegoUIKitPrebuiltCallInvitationConfig();
-
-        ZegoUIKitPrebuiltCallService.init(getApplication(), appID, appSign, userID, userName, callInvitationConfig);
 
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        ZegoUIKitPrebuiltCallInvitationService.unInit();            // this method is performs cleanup operations specific to this zegocloud service .
-    }
+
 }

@@ -26,9 +26,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.zegocloud.uikit.prebuilt.call.ZegoUIKitPrebuiltCallConfig;
-import com.zegocloud.uikit.prebuilt.call.ZegoUIKitPrebuiltCallService;
-import com.zegocloud.uikit.prebuilt.call.invite.ZegoUIKitPrebuiltCallInvitationConfig;
+
 
 public class Authentication extends AppCompatActivity {
 
@@ -43,9 +41,6 @@ public class Authentication extends AppCompatActivity {
     private static final int RC_SIGN_IN = 9001;
     private GoogleSignInClient mGoogleSignInClient;
 
-    // 🔹 ZegoCloud credentials (replace with your real values)
-    private static final long ZEGO_APP_ID = 123456789; // <-- Replace with your App ID
-    private static final String ZEGO_APP_SIGN = "your_app_sign_here"; // <-- Replace with your App Sign
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +62,6 @@ public class Authentication extends AppCompatActivity {
 
         // If already logged in → go to MainActivity
         if (currentUser != null) {
-            initZegoForUser(currentUser); // ✅ Auto-login to Zego
             startActivity(new Intent(Authentication.this, MainActivity.class));
             finish();
         }
@@ -144,8 +138,6 @@ public class Authentication extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             FirebaseUser firebaseUser = mAuth.getCurrentUser();
 
-                            // ✅ Zego login
-                            initZegoForUser(firebaseUser);
 
                             startActivity(new Intent(Authentication.this, MainActivity.class));
                             finish();
@@ -196,8 +188,7 @@ public class Authentication extends AppCompatActivity {
                                             if (signupTask.isSuccessful()) {
                                                 FirebaseUser firebaseUser = mAuth.getCurrentUser();
 
-                                                // ✅ Zego login
-                                                initZegoForUser(firebaseUser);
+
 
                                                 Intent intent = new Intent(Authentication.this, Profile_Initlization.class);
                                                 intent.putExtra("comeFrom", "Email");
@@ -277,8 +268,7 @@ public class Authentication extends AppCompatActivity {
                         FirebaseUser user = mAuth.getCurrentUser();
                         boolean isNewUser = task.getResult().getAdditionalUserInfo().isNewUser();
 
-                        // ✅ Zego login
-                        initZegoForUser(user);
+
 
                         if (!isNewUser && authenticatoin_tablayout.getSelectedTabPosition() == 1) {
                             startActivity(new Intent(Authentication.this, MainActivity.class));
@@ -304,26 +294,6 @@ public class Authentication extends AppCompatActivity {
         startActivity(intent);
     }
 
-    // ✅ Zego login method
-    private void initZegoForUser(FirebaseUser firebaseUser) {
-        if (firebaseUser == null) return;
 
-        String zegoUserID = firebaseUser.getUid();
-        String zegoUserName = firebaseUser.getDisplayName() != null && !firebaseUser.getDisplayName().isEmpty()
-                ? firebaseUser.getDisplayName()
-                : "User_" + zegoUserID.substring(0, 5);
-
-        // 🔹 Use Invitation Config instead of Call Config
-        ZegoUIKitPrebuiltCallInvitationConfig invitationConfig = new ZegoUIKitPrebuiltCallInvitationConfig();
-
-        ZegoUIKitPrebuiltCallService.init(
-                getApplication(),
-                ZEGO_APP_ID,
-                ZEGO_APP_SIGN,
-                zegoUserID,
-                zegoUserName,
-                invitationConfig
-        );
-    }
 
 }

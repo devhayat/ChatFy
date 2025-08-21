@@ -31,8 +31,7 @@ android {
 }
 
 dependencies {
-    // ✅ Zego call SDK
-    implementation("com.github.ZEGOCLOUD:zego_uikit_prebuilt_call_android:3.13.9")
+
 
     // ✅ Firebase (only one BOM version)
     implementation(platform("com.google.firebase:firebase-bom:33.1.0"))

@@ -40,7 +40,7 @@
             android:textSize="13sp"/>
     </LinearLayout>
 
-    <com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton
+    <Button
         android:layout_marginStart="-96dp"
         android:id="@+id/callicon_chatlist_mainactivity"
         android:layout_width="26dp"
@@ -50,7 +50,7 @@
         android:layout_marginEnd="16dp"
         />
 
-    <com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton
+    <Button
         android:id="@+id/videocallicon_chatlist_mainactivity"
         android:layout_width="26dp"
         android:layout_height="26dp"
