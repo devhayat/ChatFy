@@ -13,7 +13,20 @@
           "package_name": "com.example.wordwave"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "878892485283-lfgg8ei21ruqoaq1bh8rqmr11uqnu8b9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.wordwave",
+            "certificate_hash": "c3f05e4869e52aa79db0b3038ef930ae382a13f9"
+          }
+        },
+        {
+          "client_id": "878892485283-1d0fhapu68lrgpdlmkmfk0t9rgd8un7h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAbL8HLOTG6xj6g5W3iPxdne2k2bfHnpRM"
@@ -21,7 +34,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "878892485283-1d0fhapu68lrgpdlmkmfk0t9rgd8un7h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
