@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="72dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:background="@drawable/glass_bg">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/profileicon_chatlist_mainactivity"
@@ -31,24 +32,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="User Name"
+            android:fontFamily="@font/gold_man"
+            android:textStyle="bold"
+            android:textColor="@color/white"
             android:textSize="18sp"/>
         <TextView
             android:id="@+id/userstatus_chatlist_mainactivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="User Status"
+            android:fontFamily="@font/gold_man"
+            android:textStyle="bold"
+            android:textColor="@color/white"
             android:textSize="13sp"/>
     </LinearLayout>
 
     <Button
-        android:layout_marginStart="-96dp"
         android:id="@+id/callicon_chatlist_mainactivity"
-        android:layout_width="26dp"
+        android:layout_width="22dp"
         android:layout_height="26dp"
+        android:layout_marginStart="-96dp"
         android:layout_marginTop="23dp"
-        android:drawableBottom="@drawable/phone_icon"
         android:layout_marginEnd="16dp"
-        />
+        android:drawableBottom="@drawable/call_icon_individualchat_heading" />
 
     <Button
         android:id="@+id/videocallicon_chatlist_mainactivity"
